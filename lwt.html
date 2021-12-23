@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>老外滩</title>
+    	<style>
+    		html,body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				z-index: -10;
+			}
+
+    		
+			/*#content{
+				
+				width: 100%;
+				height: 100%;
+				min-width: 500px;
+				z-index: -10;
+				zoom: 1;
+				position: absolute;
+				background-image: url("res/lwtditu.jpg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center 0;
+				
+			}*/
+			#lwtan{
+				/*position: relative;*/
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				min-width: 500px;
+				z-index: -10;
+				
+				background-image: url("res/lwtditu.jpg");
+			
+			
+     			-webkit-filter: blur(0px);
+        		filter: blur(0px);
+
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center 0;
+			}
+			#back{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 2100px;
+    			margin-left: 750px;
+			}
+			
+			#end{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 2100px;
+    			margin-left: 20px;
+			}
+			#jslwt{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 270px;
+    			margin-left: 120px;
+    			display: block;
+			}
+			#cam{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 1950px;
+    			margin-left: 400px;
+			}
+			#phlwt{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 100px;
+    			margin-left: 120px;
+    			/*opacity: 0;*/
+    			animation: shan 3s linear 1;
+			}
+			@keyframes shan{
+				25%{
+					opacity: 0.1;
+				}
+				50%{
+					opacity: 0.4;
+				}
+				75%{
+					opacity: 0.7;
+				}
+				100%{
+					opacity: 0.9;
+				}
+			}
+			#phlwt img{
+				width: 850px;
+			}
+			#guanbi{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 140px;
+    			margin-left: 870px;
+    			/*opacity: 0;*/
+			}
+		
+    	</style>
+    	<script>
+    		function e(obj){return document.getElementById(obj)}
+
+    			document.onclick=function(){
+      			e('jslwt').style.display='none';
+　　　　　　 		document.onclick=null;　
+	  			e('cam').style.display='block';
+	  			e('end').style.display='block';
+	  			e('back').style.display='block';
+    		}
+    		e('jslwt').onclick=function(event){
+    		//只阻止了向上冒泡，而没有阻止向下捕获，所以点击con的内部对象时，仍然可以执行这个函数
+    			stopBubble(event); 
+			}
+			//阻止冒泡函数
+			function stopBubble(e){
+    			if(e && e.stopPropagation){
+      			e.stopPropagation(); 
+    		}
+    		else{
+      			window.event.cancelBubble=true;
+    		}
+			}
+			function onn() {
+				var timer=null;
+				var i = 0;
+     			timer = setInterval(function () {
+     				e('lwtan').style.display = i++ % 2 ? "none" : "block";
+     				i > 20 && (clearInterval(timer))
+     			}
+     			)
+				e('cam').style.display='none';
+	  			e('end').style.display='none';
+	  			e('back').style.display='none';
+	  			e('phlwt').style.display='block';
+	  			e('guanbi').style.display='block';
+	  			e('lwtan').style.filter='blur(7px)';
+	  			
+	  
+			}
+			function offf() {
+	  			e('cam').style.display='block';
+	  			e('end').style.display='block';
+	  			e('back').style.display='block';
+	  			e('phlwt').style.display='none';
+	  			e('guanbi').style.display='none';
+	 			e('lwtan').style.filter='blur(0px)';
+			}
+	
+    	</script>
+	</head>
+	<body>
+		<div id="content">
+			<div id="lwtan" style="filter:blur(0px)"></div>
+			<a href="ditu.html"><div id="back" style="display: none;"><img src="res/back.png"/></div></a>
+			<a href="end.html"><div id="end" style="display: none;"><img src="res/end.png" /></div></a>
+			<div id="cam" style="display: none;"><img src="res/cam.png" onclick="onn()" /></div>
+			<div id="phlwt" style="display: none;"><img src="res/phlwt.jpg"/></div>
+			<div id="jslwt" ><img src="res/jslwt.png"/></div>
+			<div id="guanbi" style="display: none;"><img src="res/offf.png" onclick="offf()"/></div>
+		</div>
+	</body>
+</html>

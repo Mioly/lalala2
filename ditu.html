@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang ="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>海丝之路博览会</title>
+		<style>
+			html,body {
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				/*background-size: 100% 100%;*/
+				position: relative;
+				z-index: -10;
+			}
+
+			#content{
+				
+				width: 100%;
+				height: 100%;
+				min-width: 500px;
+				z-index: -10;
+				zoom: 1;
+				position: absolute;
+				background-image: url("res/ditu.jpg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center 0;
+				
+			}
+			
+			#img1{
+   	 			position: absolute;
+    			z-index:1;
+    			margin-top: 420px;
+    			margin-left: 75px;
+			}
+			
+			#lwt{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 650px;
+    			margin-left: 480px;
+			}
+			#qahg{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 1200px;
+    			margin-left: 730px;
+			}
+			#tyg{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 1370px;
+    			margin-left: 170px;
+			}
+			#ayws{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 1859px;
+    			margin-left: 548px;
+			}
+			#endboat{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 550px;
+    			margin-left: 880px;
+			}
+			#boat1{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 1150px;
+    			margin-left: 430px;
+    			transition:all 0.5s ease 2.5s;
+			}
+			#boat2{
+				position: absolute;
+    			z-index:1;
+    			margin-top: 1150px;
+    			margin-left: 430px;
+    			transition:all 0.5s ease 2.5s;
+			}
+			#yun1{
+				position: absolute;
+    			z-index:1;
+    			animation: shan1 5s linear infinite;
+			}
+			@keyframes shan1{
+				25%{
+					opacity: 0.4;
+				}
+				50%{
+					opacity: 0.6;
+				}
+				75%{
+					opacity: 0.7;
+				}
+				100%{
+					opacity: 0.9;
+				}
+			}
+			#yun2{
+				position: absolute;
+    			z-index:1;
+    			animation: shan 3s linear infinite;
+			}
+			@keyframes shan{
+				25%{
+					opacity: 0.3;
+				}
+				50%{
+					opacity: 0.4;
+				}
+				75%{
+					opacity: 0.7;
+				}
+				100%{
+					opacity: 0.9;
+				}
+			}
+			
+		</style>
+		<script type="text/javascript">
+//			var j=0;
+//			var i=0;
+//			window.onload = function(){
+//				for(j=0;j<100000;j++){
+//  	  		if(i==0){
+//  	  			document.getElementById("boat1").style.transform = "rotate(10deg)";
+//  	  			i=1;
+//  	  		}
+//  	  		if(i==1){
+//  	  			document.getElementById("boat2").style.transform = "rotate(-10deg)";
+//  	  			i=0;
+//  	  		}  	  		
+//  	  		}
+//    }
+		</script>
+
+	</head>
+	<body >
+		<div id="content">
+			<div id="yun1"><img src="res/yun1.png" /></div>
+			<div id="yun2"><img src="res/yun2.png" /></div>
+			<div id="img1">
+				<a href="bgs.html"><img src="res/bgs.png"/></a>
+			</div>
+			<div id="lwt">
+				<a href="lwt.html"><img src="res/lwt.png"/></a>
+			</div>
+			<div id="qahg">
+				<a href="qinanhuiguan.html"><img src="res/aqhg.png"/></a>
+			</div>
+			<div id="tyg">
+				<a href="tianyige.html"><img src="res/tyg.png"/></a>
+			</div>
+			<div id="ayws">
+				<a href="ayuwangsi.html"><img src="res/ayws.png"/></a>	
+			</div>
+			<div id="endboat">
+				<a href="end.html"><img src="res/endboat.png"/></a>	
+			</div>
+			<div id="boat1" >
+				<img src="res/boat1.png"/>
+			</div>
+			<!--<div id="boat2" >
+				<img src="res/boat1.png"/>-->
+			</div>
+		</div>
+		
+	</body>
+</html>
