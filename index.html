@@ -48,6 +48,14 @@
 				position: absolute;
 				margin:290px 300px;
 			}
+			#fm{
+				opacity: 0;
+			}
+			
+			@keyframes chuxian{
+	    			0%{opacity:0}
+      				100%{opacity:1}
+      			}
 			<link rel="stylesheet" href="css/main.css" type="text/css">
 		</style>
 		
@@ -61,6 +69,12 @@
 				 if(left<700){
 				 	left+=5;
 				 	
+				 }
+				 if(left==700){
+				 	document.getElementById("fm").style.animation = "chuxian 2s ease";
+				 	document.getElementById("fm").addEventListener("animationend",function(){
+    		  			document.getElementById("fm").style.opacity = 1;
+      				});
 				 }
 				 
                window.requestAnimationFrame(jiazai);
